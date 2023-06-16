@@ -4,6 +4,7 @@
   <h2> <%=  @list.name %></h2>
     <% @list.bookmarks.each do |bookmark|%>
       <%= bookmark.comment %>
+      <%=bookmark.movie.title %>
       <%= link_to "supp", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}%>
     <%end %>
 

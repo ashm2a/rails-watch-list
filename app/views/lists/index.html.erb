@@ -1,12 +1,33 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/ds2kfyptb/image/upload/v1686924940/kminvf5tr0urhqnznok1.webp);">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
 <div class = "container">
   <h1>Lists</h1>
   <ul>
     <% @lists.each do|list| %>
      <li><%= link_to list.name, list_path(list) %></li>
-     
+    <%= cl_image_tag("kminvf5tr0urhqnznok1",
+      width: 400, height: 300, crop: :fill)%>
+
     <% end %>
   </ul>
+  </div>
 
-  <%= link_to "Add list", new_list_path, class: 'btn btn-primary' %>
-
+<div>
+  <button class="btn" type="button">
+    <strong>ADD</strong>
+      <div id="container-stars">
+        <div id="stars"></div>
+          </div>
+          <div id="glow">
+        <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </button>
+    <%= link_to "Add list", new_list_path, class: 'btn btn-primary' %>
 </div>
