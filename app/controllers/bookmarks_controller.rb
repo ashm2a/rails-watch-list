@@ -25,7 +25,7 @@ class BookmarksController < ApplicationController
     # @list = List.find(params[:list_id])
     # @bookmark.list.destroy
     # redirect_to restaurants_path, status: :see_other
-  end
+    # end
   private
 
   def bookmark_params
